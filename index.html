@@ -9,12 +9,12 @@
   <body>
     <header class="editing-menu">
       <h1>Generador de memes</h1>
-      <section class="editing-menu-image">
-        <div class="image-title">
+      <section class="editing-menu">
+        <div class="title">
           <i class="fa-regular fa-image"></i>
           <h4>Imagen</h4>
         </div>
-        <div class="image-window">
+        <div class="menu-window">
           <span class="close" id="btn-close-img">&times;</span>
           <h6 class="window-title">IMAGEN</h6>
           <div class="image-data">
@@ -25,7 +25,7 @@
             <div class="image-background">
               <label for="fondo">FONDO</label>
               <div class="background-filters">
-                <input type="color" name="color" id="color" />
+                <input class="color" type="color" name="color" id="color" />
                 <select name="Ninguno" id="filters-select">
                   <option value="">Ninguno</option>
                   <option value="">Aclarar</option>
@@ -52,7 +52,7 @@
                 <label for="">CONTRASTE</label>
                 <input class="slider" type="range" name="" id="" />
               </div>
-              <div class="image-filters-items" >
+              <div class="image-filters-items">
                 <label for="">DESENFOQUE</label>
                 <input class="slider" type="range" name="" id="" />
               </div>
@@ -78,66 +78,108 @@
               </div>
             </div>
           </div>
-          <button class="btn-reset-filters" type="reset">Reestablecer filtros</button>
+          <button class="btn-reset-filters" type="reset">
+            Reestablecer filtros
+          </button>
+        </div>
+      </section>
+      <section class="editing-menu">
+        <div class="title">
+          <i class="fa-solid fa-font"></i>
+          <h4>Texto</h4>
+        </div>
+        <div class="menu-window">
+          <span class="close" id="btn-close-img">&times;</span>
+          <h6 class="window-title">TEXTO</h6>
+          <div class="text-top-bottom">
+            <label for="">SUPERIOR</label>
+            <input class="text-enter" type="text" />
+            <div class="text-checkbtn">
+              <input type="checkbox" name="" id="" />
+              <p>Sin texto superior</p>
+            </div>
+          </div>
+          <div class="text-top-bottom">
+            <label for="">INFERIOR</label>
+            <input class="text-enter" type="text" />
+            <div class="text-checkbtn">
+              <input type="checkbox" name="" id="" />
+              <p>Sin texto inferior</p>
+            </div>
+          </div>
+          <div class="text-fonts">
+            <h6>FUENTE</h6>
+            <select name="FUENTE" id="fuente">
+              <option value="">Arial</option>
+              <option value="">Arial Black</option>
+              <option value="">American Typewriter</option>
+              <option value="">Andale Mono</option>
+              <option value="">Comic Sans MS</option>
+              <option value="">Helvetica</option>
+              <option value="">Impact</option>
+              <option value="">Verdana</option>
+              <option value="">Times New Roman</option>
+            </select>
+            <div class="text-fonts-sizes">
+              <input type="number" name="" id="" />
+              <div class="text-fonts-align">
+                <button><i class="fa-solid fa-align-left"></i></button>
+                <button><i class="fa-solid fa-align-center"></i></button>
+                <button><i class="fa-solid fa-align-right"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="text-stylize">
+            <div class="text-color">
+              <label for="">COLOR</label>
+              <input class="color" type="color" name="" id="color" />
+            </div>
+            <div class="text-color">
+              <label for="">FONDO</label>
+              <input class="color" type="color" name="" id="color" />
+            </div>
+          </div>
+          <div class="text-checkbtn">
+            <input type="checkbox" name="" id="" />
+            <p>Fondo Transparente</p>
+          </div>
+          <div class="outline">
+            <h6>CONTORNO</h6>
+            <div class="outline-items">
+              <button>Ninguno</button>
+              <button>Claro</button>
+              <button>Oscuro</button>
+            </div>
+          </div>
+          <div class="text-space">
+            <h6>ESPACIADO</h6>
+            <input class="text-space-items" type="number" name="" id="" />
+          </div>
+          <div class="text-space">
+            <h6>INTERLINEADO</h6>
+            <select class="text-space-items" name="" id="">
+              <option value="">0.8</option>
+              <option value="">1</option>
+              <option value="">1.2</option>
+              <option value="">1.5</option>
+              <option value="">2</option>
+              <option value="">2.5</option>
+            </select>
+          </div>
         </div>
       </section>
       <section>
-        <i class="fa-solid fa-font"></i>
-        <h6>Texto</h6>
-        <label for="">SUPERIOR</label>
-        <input type="text" />
-        <input type="checkbox" name="" id="" />
-        <label for="">INFERIOR</label>
-        <input type="text" />
-        <input type="checkbox" name="" id="" />
-        <h6>FUENTE</h6>
-        <select name="" id="">
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-        </select>
-        <input type="number" name="" id="" />
-        <button><i class="fa-solid fa-align-left"></i></button>
-        <button><i class="fa-solid fa-align-center"></i></button>
-        <button><i class="fa-solid fa-align-right"></i></button>
-        <label for="">COLOR</label>
-        <input type="color" name="" id="" />
-        <label for="">FONDO</label>
-        <input type="color" name="" id="" />
-        <input type="checkbox" name="" id="" />
-        <h6>CONTORNO</h6>
-        <button>Ninguno</button>
-        <button>Claro</button>
-        <button>Oscuro</button>
-        <h6>ESPACIADO</h6>
-        <input type="number" name="" id="" />
-        <h6>INTERLINEADO</h6>
-        <select name="" id="">
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-        </select>
-      </section>
-      <section>
-        <i class="fa-solid fa-lightbulb"></i>
-        <h6>Modo Oscuro</h6>
         <i class="fa-regular fa-lightbulb"></i>
+        <h6>Modo Oscuro</h6>
+        <i class="fa-solid fa-lightbulb"></i>        
         <h6>Modo Claro</h6>
       </section>
     </header>
     <main>
-      <div>
-        <h5>TOP TEXT</h5>
-        <h5>BOTTOM TEXT</h5>
+      <div class="meme-container">
+        <h3>TOP TEXT</h3>
+    
+        <h3>BOTTOM TEXT</h3>
       </div>
       <button><i class="fa-solid fa-download"></i>DESCARGAR MEME</button>
     </main>
