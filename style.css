@@ -9,16 +9,17 @@
   --background-tertiary: #385187;
   --font-color-primary: #d4e4ed;
   --font-color-secondary: #ede9e8;
+ 
 }
-[data-theme="light-theme"] {
+[change-theme="light-theme"] {
   --background-primary: #9db6cf;
   --background-secondary: #b6cade;
   --background-tertiary: #d4e4ed;
   --font-color-primary: #162440;
-  --font-color-secondary: #2c406e;
+  --font-color-secondary: #0f275f;
 }
 
-* {
+* { 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -52,6 +53,8 @@
   }
 
   .title {
+    width: 25%;
+    padding: 5px;
     font-size: 1rem;
     display: flex;
     gap: 3px;
@@ -74,6 +77,7 @@
   }
 
   .close {
+    position: fixed;
     align-self: flex-end;
   }
 
@@ -295,6 +299,20 @@
     background-color: var(--background-tertiary);
   }
 
+  .change-mode{
+    width: 25%;
+    padding: 5px;    
+    font-size: 15px;
+    display: flex;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--font-color-primary);
+    gap: 0.4rem;
+  }
+
+  
+
   .meme-container {
     width: 100%;
     padding-top: 1rem;
@@ -326,6 +344,14 @@
     font-weight: bold;
     color: var(--font-color-secondary);
     background-color:  #1eae98;
+  }
+
+  .visibility--hidden {
+    display: none;
+  }
+
+  .hidden {
+    display: none;
   }
 
  
