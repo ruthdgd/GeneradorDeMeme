@@ -47,3 +47,49 @@ $(".open-window-title").addEventListener("click", () => {
     $(".open-window-title").classList.toggle("active")
     $(".window-title-container").classList.toggle("visibility--hidden")
 })
+
+// input url======
+
+$("#url").addEventListener("input", (e)=>{
+    $(".meme-box").style.backgroundImage = `url(${e.target.value})`
+})
+
+// input text========
+
+$("#texts").addEventListener("input", (e)=>{
+    $(".top-text").innerText= e.target.value
+})
+
+$("#textb").addEventListener("input", (e)=>{
+    $(".bottom-text").innerText= e.target.value
+})
+
+
+// FILTROS INPUT RANGE=============================
+
+// funcion de filtros
+
+const filtersRange= () => {
+    $(".meme-box").style.filter = `brightness(${$("#brightness").value}%) opacity(${$("#opacity").value}) contrast(${$("#contrast").value}%) blur(${$("#blur").value}px) grayscale(${$("#grayscale").value}%) sepia(${$("#sepia").value}%) hue-rotation(${$("#hue-rotation").value}deg) saturation(${$("#saturation").value}%) invert(${$("#invert").value})`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+}
+
+// eventos filtros
+
+$("#brightness").addEventListener("input", filtersRange)
+
+$("#opacity").addEventListener("input", filtersRange)
+
+$("#contrast").addEventListener("input", filtersRange)
+
+$("#blur").addEventListener("input", filtersRange)
+
+$("#grayscale").addEventListener("input", filtersRange)
+
+$("#sepia").addEventListener("input", filtersRange)
+
+$("#hue-rotation").addEventListener("input", filtersRange)
+
+$("#saturation").addEventListener("input", filtersRange)
+
+$("#invert").addEventListener("input", filtersRange)
+

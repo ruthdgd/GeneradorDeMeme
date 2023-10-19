@@ -199,6 +199,10 @@
     margin-bottom: 0.5rem;
   }
 
+  .text-top-bottom input{
+    color: var(--font-color-secondary);
+  }
+
   .text-enter {
     border: 0;
     border-radius: 5px;
@@ -333,6 +337,9 @@
     width: 300px;
     height: 300px;
     background-color: black;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   .meme-download {
@@ -352,6 +359,8 @@
 
   .hidden {
     display: none;
+    opacity: 1;
+    brightness
   }
 
  
