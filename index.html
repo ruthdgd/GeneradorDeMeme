@@ -25,9 +25,9 @@
             <div class="image-background">
               <label for="fondo">FONDO</label>
               <div class="background-filters">
-                <input class="color" type="color" name="color" id="color" />
+                <input class="color" type="color" name="color" id="color-back-meme" />
                 <select name="Ninguno" id="filters-select">
-                  <option value="">Ninguno</option>
+                  <option value="0">Ninguno</option>
                   <option value="">Aclarar</option>
                   <option value="">Oscurecer</option>
                   <option value="">Diferencia</option>
@@ -70,11 +70,11 @@
               </div>
               <div class="image-filters-items">
                 <label for="">SATURADO</label>
-                <input class="slider" type="range" name="range" id="saturation" min="100" max="1000" step="10" value="100"/>
+                <input class="slider" type="range" name="range" id="saturate" min="100" max="1000" step="10" value="100"/>
               </div>
               <div class="image-filters-items">
                 <label for="">NEGATIVO</label>
-                <input class="slider" type="range" name="range" id="invert" min="0" max="1" step="0.1" value="1"/>
+                <input class="slider" type="range" name="range" id="invert" min="0" max="1" step="0.1" value="-1"/>
               </div>
             </div>
           </div>
@@ -109,8 +109,8 @@
           <div class="text-fonts">
             <h6>FUENTE</h6>
             <select name="FUENTE" id="fuente">
-              <option value="">Arial</option>
-              <option value="">Arial Black</option>
+              <option value="Tmes New Roman">Seleccionar</option>
+              <option value="Arial">Arial</option>
               <option value="">American Typewriter</option>
               <option value="">Andale Mono</option>
               <option value="">Comic Sans MS</option>
@@ -131,11 +131,11 @@
           <div class="text-stylize">
             <div class="text-color">
               <label for="">COLOR</label>
-              <input class="color" type="color" name="" id="color" />
+              <input class="color" type="color" name="" id="color-text" />
             </div>
             <div class="text-color">
               <label for="">FONDO</label>
-              <input class="color" type="color" name="" id="color" />
+              <input class="color" type="color" name="" id="color-back-text" />
             </div>
           </div>
           <div class="text-checkbtn">

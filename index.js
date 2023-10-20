@@ -2,6 +2,17 @@
 
 const $ = (selector) => document.querySelector(selector)
 
+const memeBox = document.querySelector(".meme-box");
+const brightnessInput = document.querySelector("#brightness");
+const opacityInput = document.querySelector("#opacity");
+const contrastInput = document.querySelector("#contrast");
+const blurInput = document.querySelector("#blur");
+const grayscaleInput = document.querySelector("#grayscale");
+const sepiaInput = document.querySelector("#sepia");
+const hueRotationInput = document.querySelector("#hue-rotate");
+const saturationInput = document.querySelector("#saturate");
+const invertInput = document.querySelector("#invert");
+
 // ======== VENTANA MODAL ============
 
 // $("#close-window-image").addEventListener("click", ()=>{
@@ -36,6 +47,29 @@ $(".change-mode").addEventListener("click", ()=>{
 
 
 
+
+
+// funcion de filtros
+
+const filtersRange = () => {
+    memeBox.style.filter = `brightness(${brightnessInput.value}) opacity(${opacityInput.value}) contrast(${contrastInput.value}%) blur(${blurInput.value}px) grayscale(${grayscaleInput.value}%) sepia(${sepiaInput.value}%) hue-rotate(${hueRotationInput.value}deg) saturate(${saturationInput.value}%) invert(${invertInput.value})`
+  }
+
+// eventos filtros
+
+brightnessInput.addEventListener("input", filtersRange)
+opacityInput.addEventListener("input", filtersRange)
+contrastInput.addEventListener("input", filtersRange)
+blurInput.addEventListener("input", filtersRange)
+grayscaleInput.addEventListener("input", filtersRange)
+sepiaInput.addEventListener("input", filtersRange)
+hueRotationInput.addEventListener("input", filtersRange)
+saturationInput.addEventListener("input", filtersRange)
+invertInput.addEventListener("input", filtersRange)
+
+//Reset filters=========================================
+
+
 // ================================= acorddion===================
 
 $(".open-window-image").addEventListener("click", () => {
@@ -64,32 +98,24 @@ $("#textb").addEventListener("input", (e)=>{
     $(".bottom-text").innerText= e.target.value
 })
 
+$("#color-back-meme").addEventListener("input", (e) =>{
+    $(".meme-box").style.backgroundColor=e.target.value
+})
 
-// FILTROS INPUT RANGE=============================
+$("#color-text").addEventListener("input", (e) =>{
+    $(".top-text").style.color=e.target.value
+})
 
-// funcion de filtros
+$("#color-text").addEventListener("input", (e) =>{
+    $(".bottom-text").style.color=e.target.value
+})
 
-const filtersRange= () => {
-    $(".meme-box").style.filter = `brightness(${$("#brightness").value}) opacity(${$("#opacity").value}) contrast(${$("#contrast").value}%) blur(${$("#blur").value}px) grayscale(${$("#grayscale").value}%) sepia(${$("#sepia").value}%) hue-rotate(${$("#hue-rotate").value}deg) saturation(${$("#saturation").value}%) invert(${$("#invert").value})`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-}
+$("#color-back-text").addEventListener("input", (e) =>{
+    $(".bottom-text").style.backgroundColor=e.target.value
+})
 
-// eventos filtros
+$("#color-back-text").addEventListener("input", (e) =>{
+    $(".top-text").style.backgroundColor=e.target.value
+})
 
-$("#brightness").addEventListener("input", filtersRange)
-
-$("#opacity").addEventListener("input", filtersRange)
-
-$("#contrast").addEventListener("input", filtersRange)
-
-$("#blur").addEventListener("input", filtersRange)
-
-$("#grayscale").addEventListener("input", filtersRange)
-
-$("#sepia").addEventListener("input", filtersRange)
-
-$("#hue-rotate").addEventListener("input", filtersRange)
-
-$("#saturation").addEventListener("input", filtersRange)
-
-$("#invert").addEventListener("input", filtersRange)
 
