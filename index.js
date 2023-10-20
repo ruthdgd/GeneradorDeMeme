@@ -69,6 +69,18 @@ invertInput.addEventListener("input", filtersRange)
 
 //Reset filters=========================================
 
+$("#reset").addEventListener("click", () => {
+    $("#brightness").value = "0"
+    $("#opacity").value = "0"
+    $("#contrast").value = "0"
+    $("#blur").value = "0"
+    $("#grayscale").value = "0"
+    $("#sepia").value = "0"
+    $("#hue-rotate").value = "0"
+    $("#saturate").value = "0"
+    $("#invert").value = "0"
+    $(".meme-box").style.filter = "none"
+})
 
 // ================================= acorddion===================
 

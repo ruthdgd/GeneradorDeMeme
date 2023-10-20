@@ -27,12 +27,12 @@
               <div class="background-filters">
                 <input class="color" type="color" name="color" id="color-back-meme" />
                 <select name="Ninguno" id="filters-select">
-                  <option value="0">Ninguno</option>
-                  <option value="">Aclarar</option>
-                  <option value="">Oscurecer</option>
-                  <option value="">Diferencia</option>
-                  <option value="">Luminosidad</option>
-                  <option value="">Multiplicar</option>
+                  <option value="unset">Ninguno</option>
+                  <option value="lighten">Aclarar</option>
+                  <option value="darken">Oscurecer</option>
+                  <option value="difference">Diferencia</option>
+                  <option value="luminosity">Luminosidad</option>
+                  <option value="multiply">Multiplicar</option>
                 </select>
               </div>
             </div>
@@ -78,7 +78,7 @@
               </div>
             </div>
           </div>
-          <button class="btn-reset-filters" type="reset">
+          <button class="btn-reset-filters" type="reset" id="reset">
             Reestablecer filtros
           </button>
         </div>
