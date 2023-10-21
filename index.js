@@ -140,3 +140,21 @@ $("#filters-select").addEventListener("input", (e) => {
 
 //checkbox con/sin texto================
 
+$("#check-top-text").addEventListener("input", (e) => {
+    if(e.target.checked){
+        $(".top-text").style.display = "none"
+    }else{
+        $(".top-text").style.display = "block"
+    }
+})
+
+$("#check-bottom-text").addEventListener("input", (e) => {
+    if(e.target.checked){
+        $(".bottom-text").style.display = "none"
+    }else{ 
+        $(".bottom-text").style.display = "block"
+    }
+})
+
+
+
