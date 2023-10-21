@@ -156,5 +156,23 @@ $("#check-bottom-text").addEventListener("input", (e) => {
     }
 })
 
+$("#font--select").addEventListener("input", (e) => {
+    $(".top-text").style.fontFamily = e.target.value
+    $(".bottom-text").style.fontFamily = e.target.value
+})
+
+// input font size====================================
+
+$("#font--size").addEventListener("input", (e) => {
+    const fontSizeMeme = e.target.value + "px"
+    $(".top-text").style.fontSize = fontSizeMeme 
+ })
+
+ $("#font--size").addEventListener("input", (e) => {
+    const fontSizeMeme  = e.target.value + "px"
+    $(".bottom-text").style.fontSize = fontSizeMeme 
+ })
+
+
 
 

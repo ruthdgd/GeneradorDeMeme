@@ -229,6 +229,10 @@
     gap: 0.4rem;
   }
 
+  #font--size{
+    writing-mode: horizontal-tb !important;
+  }
+
   .text-fonts-sizes input {
     width: 48%;
     color: var(--font-color-secondary);
@@ -321,6 +325,7 @@
     width: 100%;
     padding-top: 1rem;
     background-color: var(--background-secondary);
+    object-fit: contain;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -330,7 +335,9 @@
     width: 300px;
     font-weight: bold;
     text-align: center;
-    background-color: aliceblue;    
+    background-color: aliceblue;
+    object-fit: contain; 
+    overflow: hidden;   
   }
 
   .meme-box {
@@ -359,23 +366,10 @@
 
   .hidden {
     display: none !important;
-    mix
+    
   }
+}
 
- 
-
-
-
-
-
+@media screen and (min-width: 1000px) {
   
-
-  
-
-
-
-
-
-
-
 }
