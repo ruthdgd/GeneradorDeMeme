@@ -173,6 +173,31 @@ $("#font--size").addEventListener("input", (e) => {
     $(".bottom-text").style.fontSize = fontSizeMeme 
  })
 
+ //text align buttons=========================================
+$(".fa-align-left").addEventListener("click", () => {
+    $(".top-text").style.textAlign = ("left")
+    $(".bottom-text").style.textAlign = ("left")
+})
+
+$(".fa-align-center").addEventListener("click", () => {
+    $(".top-text").style.textAlign = ("center")
+    $(".bottom-text").style.textAlign = ("center")
+})
+
+$(".fa-align-right").addEventListener("click", () => {
+    $(".top-text").style.textAlign = ("right")
+    $(".bottom-text").style.textAlign = ("right")
+})
+
+
+
+
+
+
+   
+
+  
+
 
 
 

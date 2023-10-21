@@ -366,6 +366,7 @@
 
   .hidden {
     display: none !important;
+    text-align: l ;
     
   }
 }
