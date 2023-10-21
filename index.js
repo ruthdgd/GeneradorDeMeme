@@ -131,3 +131,12 @@ $("#color-back-text").addEventListener("input", (e) =>{
 })
 
 
+//select filters==================
+
+$("#filters-select").addEventListener("input", (e) => {
+    $(".meme-box").style.mixBlendMode = e.target.value
+})
+
+
+//checkbox con/sin texto================
+
