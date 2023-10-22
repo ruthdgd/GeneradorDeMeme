@@ -215,11 +215,6 @@ $(".dark-tone").addEventListener("click", () => {
 })
 
 
-// $(".dark-tone").addEventListener("click", () => {
-//     $(".top-text").style.webkitTextStroke = "2px"
-//     $(".bottom-text").style.webkitTextStroke = "2px"
-// })
-
 $("#text--space").addEventListener("input", (e) => {
     const spacing = e.target.value + "px"
     $(".top-text").style.padding = spacing
@@ -241,7 +236,13 @@ $("#text-space-items").addEventListener("input", (e) => {
     $(".bottom-text").style.lineHeight = e.target.value
 })
 
+const downloadMeme = () => {
+    domtoimage.toBlob($(".meme-container-box")).then((blob) => {
+        saveAs(blob, "my-meme.png")
+    })
+}
 
+$(".meme-download").addEventListener("click",downloadMeme)
 
 
 
