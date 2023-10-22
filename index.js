@@ -189,6 +189,60 @@ $(".fa-align-right").addEventListener("click", () => {
     $(".bottom-text").style.textAlign = ("right")
 })
 
+$("#check-transparent").addEventListener("input", (e) => {
+    if(e.target.checked){
+        $(".top-text").style.backgroundColor = "transparent"
+        $(".bottom-text").style.backgroundColor = "transparent"
+    }else{
+        $(".top-text").style.backgroundColor = "aliceblue"
+        $(".bottom-text").style.backgroundColor = "aliceblue"
+    }
+})
+
+$(".unset-tone").addEventListener("click", () => {
+    $(".top-text").style.filter = "none"
+    $(".bottom-text").style.filter = "none"
+})
+
+$(".light-tone").addEventListener("click", () => {
+    $(".top-text").style.webkitTextStroke = "2px white"
+    $(".bottom-text").style.webkitTextStroke = "2px white"
+})
+
+$(".dark-tone").addEventListener("click", () => {
+    $(".top-text").style.webkitTextStroke = " 2px black"
+    $(".bottom-text").style.webkitTextStroke = "2px black"
+})
+
+
+// $(".dark-tone").addEventListener("click", () => {
+//     $(".top-text").style.webkitTextStroke = "2px"
+//     $(".bottom-text").style.webkitTextStroke = "2px"
+// })
+
+$("#text--space").addEventListener("input", (e) => {
+    const spacing = e.target.value + "px"
+    $(".top-text").style.padding = spacing
+})
+
+$("#text--space").addEventListener("input", (e) => {
+    const spacing = e.target.value + "px"
+    $(".bottom-text").style.padding = spacing
+})
+
+
+//INTERLINEADO ==============================================
+
+$("#text-space-items").addEventListener("input", (e) => {
+    $(".top-text").style.lineHeight = e.target.value
+})
+
+$("#text-space-items").addEventListener("input", (e) => {
+    $(".bottom-text").style.lineHeight = e.target.value
+})
+
+
+
 
 
 

@@ -139,30 +139,30 @@
             </div>
           </div>
           <div class="text-checkbtn">
-            <input type="checkbox" name="" id="" />
+            <input type="checkbox" name="checkbox fondo" id="check-transparent" />
             <p>Fondo Transparente</p>
           </div>
           <div class="outline">
             <h6>CONTORNO</h6>
             <div class="outline-items">
-              <button>Ninguno</button>
-              <button>Claro</button>
-              <button>Oscuro</button>
+              <button class="unset-tone" id="unset-tone">Ninguno</button>
+              <button class="light-tone" id="light-tone">Claro</button>
+              <button class="dark-tone" id="dark-tone">Oscuro</button>
             </div>
           </div>
           <div class="text-space">
             <h6>ESPACIADO</h6>
-            <input class="text-space-items" type="number" name="number" id="text--space" />
+            <input class="text-space-items" type="number" name="number" id="text--space" min="5" max="50" value="25"/>
           </div>
           <div class="text-space">
             <h6>INTERLINEADO</h6>
-            <select class="text-space-items" name="" id="">
-              <option value="">0.8</option>
-              <option value="">1</option>
-              <option value="">1.2</option>
-              <option value="">1.5</option>
-              <option value="">2</option>
-              <option value="">2.5</option>
+            <select class="text-space-items" name="text-space-items" id="text-space-items">
+              <option value="0.8">0.8</option>
+              <option value="1">1</option>
+              <option value="1.2">1.2</option>
+              <option value="1.5">1.5</option>
+              <option value="2">2</option>
+              <option value="2.5">2.5</option>
             </select>
           </div>
         </div>
@@ -175,9 +175,9 @@
        <!-- MEME--------------------------------------------- -->
     <main class="meme-container">   
       <div class="meme-container-box">
-        <h3 class="top-text text-orientation">TOP TEXT</h3>
+        <h3 class="top-text">TOP TEXT</h3>
         <div class="meme-box "></div>
-        <h3 class="bottom-text text-orientation">BOTTOM TEXT</h3>
+        <h3 class="bottom-text">BOTTOM TEXT</h3>
       </div>
       <button class="meme-download"><i class="fa-solid fa-download"></i> DESCARGAR MEME</button>
     </main>
