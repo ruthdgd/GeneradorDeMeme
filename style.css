@@ -4,8 +4,8 @@
 /* font-family: 'Nunito', sans-serif; */
 
 :root {
-  --background-primary: #162440;
-  --background-secondary: #2c406e;
+  --background-primary: #101e3b;
+  --background-secondary: #213564;
   --background-tertiary: #385187;
   --font-color-primary: #d4e4ed;
   --font-color-secondary: #ede9e8;
@@ -40,6 +40,7 @@
   .editing-menu h1 {
     font-size: 1.8rem;
     margin: 1rem;
+    padding: 0.3rem;
     color: var(--font-color-primary);
     font-family: "Tilt Neon", sans-serif;
     text-align: center;
@@ -52,21 +53,46 @@
     align-items: center;
   }
 
-  .title {
-    width: 25%;
-    padding: 5px;
+  .title {    
+    padding: 3px;
     font-size: 1rem;
+    border: 0;
+    background-color: var(--background-primary);
+    color: var(--font-color-primary);
+    cursor: pointer;
     display: flex;
-    gap: 3px;
+    gap: 4px;
   }
 
-  .menu-window {
+  .navbar {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .change-mode{
+    padding: 5px;    
+    font-size: 1rem;
+    display: flex;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--font-color-primary);
+    gap: 0.4rem;
+  }
+  
+  .sidebar{
     width: 85%;
+  }
+  .menu-window {
+    width: 100%;
     padding: 0.5rem;
     border-radius: 5px;
     -webkit-box-shadow: 4px 6px 5px 1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 4px 6px 5px 1px rgba(0, 0, 0, 0.75);
     box-shadow: 4px 6px 5px 1px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
     display: flex;
     flex-direction: column;
   }
@@ -86,13 +112,14 @@
     font-weight: bold;
     display: flex;
     flex-direction: column;
+    
   }
 
   .image-url label {
     padding-bottom: 0.5rem;
   }
 
-  #url {
+  #url{
     border: 0;
     border-radius: 5px;
     background-color: var(--background-tertiary);
@@ -305,26 +332,12 @@
     border-radius: 5px;
     color: var(--font-color-secondary);
     background-color: var(--background-tertiary);
-  }
-
-  .change-mode{
-    width: 25%;
-    padding: 5px;    
-    font-size: 15px;
-    display: flex;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    color: var(--font-color-primary);
-    gap: 0.4rem;
-  }
-
-  
+  }  
 
   .meme-container {
     width: 100%;
-    padding-top: 1rem;
-    background-color: var(--background-secondary);
+    padding-top: 1.5rem;
+    background-color: var(--background-tertiary);
     object-fit: contain;
     display: flex;
     flex-direction: column;
@@ -351,8 +364,8 @@
 
   .meme-download {
     padding: 5px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
     border: 0;
     border-radius: 5px;
     font-weight: bold;
@@ -361,7 +374,7 @@
   }
 
   .visibility--hidden {
-    display: none;
+    display: none !important;
   }
 
   .hidden {
@@ -369,6 +382,55 @@
   }
 }
 
-@media screen and (min-width: 1000px) {
-  
+@media screen and (min-width: 900px) {
+  body{
+    position: relative;
+    background-color: var(--background-tertiary);
+  }
+
+  .window-image-container{
+    width: 16rem;
+    height: 100%;  
+    background-color: var(--background-secondary);  
+    position: absolute !important;
+    z-index: 2;
+    top: 0;
+    right: 0;
+ }
+
+ .window-title-container{
+  width: 16rem;
+  height: 100%;  
+  background-color: var(--background-secondary);  
+  position: absolute !important;
+  top: 0;
+  right: 0; 
+}
+
+ .editing-menu h1{
+  font-size: 2.5rem;
+ }
+
+ .navbar{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+ }
+
+ .title{
+  font-size: 1.2rem;
+ }
+
+
+ .menu-window{
+  padding-top: 1.5rem;
+ }
+
+ .meme-container-box{
+  margin-top: 2rem;
+ }  
+
+ .hidden{
+  display: none;
+ }
+
 }

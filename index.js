@@ -13,24 +13,6 @@ const hueRotationInput = document.querySelector("#hue-rotate");
 const saturationInput = document.querySelector("#saturate");
 const invertInput = document.querySelector("#invert");
 
-// ======== VENTANA MODAL ============
-
-// $("#close-window-image").addEventListener("click", ()=>{
-//     $("#window-image-container").style.display= "none"
-// })
-
-// $ ("#open-window-image").addEventListener("click", ()=>{
-//     $("#window-image-container").style.display= "block"
-// })
-
-
-// $ ("#open-window-title").addEventListener("click", ()=>{
-//     $("#window-title-container").style.display= "block"
-// })
-
-// $("#close-window-title").addEventListener("click", ()=>{
-//     $("#window-title-container").style.display= "none"
-// })
 
 // =======================MODO CLARO MODO OSCURO=======================
 
@@ -44,10 +26,6 @@ $(".change-mode").addEventListener("click", ()=>{
     $("#lightbulb-off").classList.toggle("hidden")
     $("#lightbulb-on").classList.toggle("hidden")
 })
-
-
-
-
 
 // funcion de filtros
 
@@ -94,6 +72,10 @@ $(".open-window-title").addEventListener("click", () => {
     $(".window-title-container").classList.toggle("visibility--hidden")
 })
 
+
+// sidebar======================================================================
+
+
 // input url======
 
 $("#url").addEventListener("input", (e)=>{
@@ -130,13 +112,11 @@ $("#color-back-text").addEventListener("input", (e) =>{
     $(".top-text").style.backgroundColor=e.target.value
 })
 
-
 //select filters==================
 
 $("#filters-select").addEventListener("input", (e) => {
     $(".meme-box").style.mixBlendMode = e.target.value
 })
-
 
 //checkbox con/sin texto================
 
@@ -174,6 +154,7 @@ $("#font--size").addEventListener("input", (e) => {
  })
 
  //text align buttons=========================================
+
 $(".fa-align-left").addEventListener("click", () => {
     $(".top-text").style.textAlign = ("left")
     $(".bottom-text").style.textAlign = ("left")
@@ -214,7 +195,6 @@ $(".dark-tone").addEventListener("click", () => {
     $(".bottom-text").style.webkitTextStroke = "2px black"
 })
 
-
 $("#text--space").addEventListener("input", (e) => {
     const spacing = e.target.value + "px"
     $(".top-text").style.padding = spacing
@@ -224,7 +204,6 @@ $("#text--space").addEventListener("input", (e) => {
     const spacing = e.target.value + "px"
     $(".bottom-text").style.padding = spacing
 })
-
 
 //INTERLINEADO ==============================================
 
@@ -244,6 +223,10 @@ const downloadMeme = () => {
 
 $(".meme-download").addEventListener("click",downloadMeme)
 
+// sidebar======================================================================
+$(".hidden-window").addEventListener("click", () => {
+
+})
 
 
 
