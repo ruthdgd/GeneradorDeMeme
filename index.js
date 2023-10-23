@@ -228,6 +228,16 @@ $(".hidden-window").addEventListener("click", () => {
 
 })
 
+$(".open-window-image").addEventListener("click", () => {
+    $(".window-image-container").style.width = "16rem"
+    $(".open-window-image").style.display = "none"
+})
+
+$(".open-window-title").addEventListener("click", () => {
+    $("window-title-container").style.width = "0"
+    $(".open-window-title").style.display = "block"
+})
+
 
 
 
