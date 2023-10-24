@@ -13,6 +13,42 @@ const hueRotationInput = document.querySelector("#hue-rotate");
 const saturationInput = document.querySelector("#saturate");
 const invertInput = document.querySelector("#invert");
 
+// funcion de filtros
+
+const filtersRange = () => {
+    memeBox.style.filter = `brightness(${brightnessInput.value}) opacity(${opacityInput.value}) contrast(${contrastInput.value}%) blur(${blurInput.value}px) grayscale(${grayscaleInput.value}%) sepia(${sepiaInput.value}%) hue-rotate(${hueRotationInput.value}deg) saturate(${saturationInput.value}%) invert(${invertInput.value})`
+  }
+
+//eventos===================================eventos=================================
+
+
+// ventana modal======================================================
+
+$("#open-window-image").addEventListener("click", () => {
+    $(".window-image-container").style.display = "block"
+})
+
+$("#btn-close-image").addEventListener("click", () => {
+    $(".window-image-container").style.display = "none"
+})
+
+$("#open-window-title").addEventListener("click", () => {
+    $(".window-title-container").style.display = "block"
+})
+
+$("#btn-close-title").addEventListener("click", () => {
+    $(".window-title-container").style.display = "none"
+})
+
+// aleternar paneles en desktop=====================
+
+$("#open-window-image").addEventListener("click", () => {
+    $(".window-image-container").classList.toggle(".window-title-container")
+})
+
+$("#open-window-image").addEventListener("click", () => {
+    $(".window-title-container").style.display = "none"
+})
 
 // =======================MODO CLARO MODO OSCURO=======================
 
@@ -27,13 +63,7 @@ $(".change-mode").addEventListener("click", ()=>{
     $("#lightbulb-on").classList.toggle("hidden")
 })
 
-// funcion de filtros
-
-const filtersRange = () => {
-    memeBox.style.filter = `brightness(${brightnessInput.value}) opacity(${opacityInput.value}) contrast(${contrastInput.value}%) blur(${blurInput.value}px) grayscale(${grayscaleInput.value}%) sepia(${sepiaInput.value}%) hue-rotate(${hueRotationInput.value}deg) saturate(${saturationInput.value}%) invert(${invertInput.value})`
-  }
-
-// eventos filtros
+// eventos filtros=============================================
 
 brightnessInput.addEventListener("input", filtersRange)
 opacityInput.addEventListener("input", filtersRange)
@@ -60,25 +90,13 @@ $("#reset").addEventListener("click", () => {
     $(".meme-box").style.filter = "none"
 })
 
-// ================================= acorddion===================
-
-// $(".open-window-image").addEventListener("click", () => {
-//     $(".open-window-image").classList.toggle("active")
-//     $(".window-image-container").classList.toggle("visibility--hidden")
-// })
-
-// $(".open-window-title").addEventListener("click", () => {
-//     $(".open-window-title").classList.toggle("active")
-//     $(".window-title-container").classList.toggle("visibility--hidden")
-// })
-
-// input url======
+// input url========================================================
 
 $("#url").addEventListener("input", (e)=>{
     $(".meme-box").style.backgroundImage = `url(${e.target.value})`
 })
 
-// input text========
+// input text=======================================================
 
 $("#texts").addEventListener("input", (e)=>{
     $(".top-text").innerText= e.target.value
@@ -93,7 +111,7 @@ $("#color-back-meme").addEventListener("input", (e) =>{
 })
 
 $("#color-text").addEventListener("input", (e) =>{
-    $(".top-text").style.color=e.target.value
+    $(".top-text").style.color = e.target.value
 })
 
 $("#color-text").addEventListener("input", (e) =>{
@@ -108,13 +126,13 @@ $("#color-back-text").addEventListener("input", (e) =>{
     $(".top-text").style.backgroundColor=e.target.value
 })
 
-//select filters==================
+//select filters=========================================
 
 $("#filters-select").addEventListener("input", (e) => {
     $(".meme-box").style.mixBlendMode = e.target.value
 })
 
-//checkbox con/sin texto================
+//checkbox con/sin texto=================================
 
 $("#check-top-text").addEventListener("input", (e) => {
     if(e.target.checked){
@@ -132,12 +150,14 @@ $("#check-bottom-text").addEventListener("input", (e) => {
     }
 })
 
+//select fonts==============================================
+
 $("#font--select").addEventListener("input", (e) => {
     $(".top-text").style.fontFamily = e.target.value
     $(".bottom-text").style.fontFamily = e.target.value
 })
 
-// input font size====================================
+// input font size=========================================
 
 $("#font--size").addEventListener("input", (e) => {
     const fontSizeMeme = e.target.value + "px"
@@ -166,6 +186,9 @@ $(".fa-align-right").addEventListener("click", () => {
     $(".bottom-text").style.textAlign = ("right")
 })
 
+
+//fondo transparente=================================================
+
 $("#check-transparent").addEventListener("input", (e) => {
     if(e.target.checked){
         $(".top-text").style.backgroundColor = "transparent"
@@ -175,6 +198,9 @@ $("#check-transparent").addEventListener("input", (e) => {
         $(".bottom-text").style.backgroundColor = "aliceblue"
     }
 })
+
+
+//botones de contorno=================================================
 
 $(".unset-tone").addEventListener("click", () => {
     $(".top-text").style.filter = "none"
@@ -190,6 +216,8 @@ $(".dark-tone").addEventListener("click", () => {
     $(".top-text").style.webkitTextStroke = " 2px black"
     $(".bottom-text").style.webkitTextStroke = "2px black"
 })
+
+//espaciado===============================================
 
 $("#text--space").addEventListener("input", (e) => {
     const spacing = e.target.value + "px"
@@ -211,6 +239,9 @@ $("#text-space-items").addEventListener("input", (e) => {
     $(".bottom-text").style.lineHeight = e.target.value
 })
 
+
+// descargar meme=================================================
+
 const downloadMeme = () => {
     domtoimage.toBlob($(".meme-container-box")).then((blob) => {
         saveAs(blob, "my-meme.png")
@@ -219,33 +250,8 @@ const downloadMeme = () => {
 
 $(".meme-download").addEventListener("click",downloadMeme)
 
-// ventana modal======================================================================
 
-$("#open-window-image").addEventListener("click", () => {
-    $(".window-image-container").style.display = "block"
-})
 
-$("#btn-close-image").addEventListener("click", () => {
-    $(".window-image-container").style.display = "none"
-})
-
-$("#open-window-title").addEventListener("click", () => {
-    $(".window-title-container").style.display = "block"
-})
-
-$("#btn-close-title").addEventListener("click", () => {
-    $(".window-title-container").style.display = "none"
-})
-
-// aleternar paneles en desktop=====================
-
-$("#open-window-image").addEventListener("click", () => {
-    $(".window-image-container").classList.toggle(".window-title-container")
-})
-
-$("#open-window-image").addEventListener("click", () => {
-    $(".window-title-container").style.display = "none"
-})
 
 
 
