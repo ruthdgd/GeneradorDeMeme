@@ -63,39 +63,39 @@
           <h6>FILTROS</h6>
           <div>
             <div class="image-filters-items">
-              <label for="">BRILLO</label>
+              <label for="brightness">BRILLO</label>
               <input class="slider" type="range" name="range" id="brightness" min="0" max="1" step="0.1" value="1"/>
             </div>
             <div class="image-filters-items">
-              <label for="">OPACIDAD</label>
+              <label for="opacity">OPACIDAD</label>
               <input  class="slider" type="range" name="range" id="opacity" min="0" max="1" step="0.1" value="1"/>
             </div>
             <div class="image-filters-items">
-              <label for="">CONTRASTE</label>
+              <label for="contrast">CONTRASTE</label>
               <input class="slider" type="range" name="rage" id="contrast"  min="100" max="1000" step="1" value="100"/>
             </div>
             <div class="image-filters-items">
-              <label for="">DESENFOQUE</label>
+              <label for="blur">DESENFOQUE</label>
               <input class="slider" type="range" name="range" id="blur" min="0" max="10" step="1" value="0"/>
             </div>
             <div class="image-filters-items">
-              <label for="">ESCALA DE GRISES</label>
+              <label for="grayscale">ESCALA DE GRISES</label>
               <input  class="slider" type="range" name="range" id="grayscale" min="0" max="100" step="1" value="0"/>
             </div>
             <div class="image-filters-items">
-              <label for="">SEPIA</label>
+              <label for="sepia">SEPIA</label>
               <input class="slider" type="range" name="range" id="sepia" min="0" max="100" step="1" value="0"/> 
             </div>
             <div class="image-filters-items">
-              <label for="">HUE</label>
+              <label for="hue-rotate">HUE</label>
               <input class="slider" type="range" name="range" id="hue-rotate" min="0" max="359" step="1" value="0"/>
             </div>
             <div class="image-filters-items">
-              <label for="">SATURADO</label>
+              <label for="saturate">SATURADO</label>
               <input class="slider" type="range" name="range" id="saturate" min="100" max="1000" step="10" value="100"/>
             </div>
             <div class="image-filters-items">
-              <label for="">NEGATIVO</label>
+              <label for="invert">NEGATIVO</label>
               <input class="slider" type="range" name="range" id="invert" min="0" max="1" step="0.1" value="-1"/>
             </div>
           </div>
@@ -114,7 +114,7 @@
           <label for="">SUPERIOR</label>
           <input class="text-enter" type="text" id="texts" />
           <div class="text-checkbtn">
-            <input type="checkbox" name="" id="check-top-text" />
+            <input type="checkbox" name="checkbox" id="check-top-text" />
             <p>Sin texto superior</p>
           </div>
         </div>
@@ -122,7 +122,7 @@
           <label for="">INFERIOR</label>
           <input class="text-enter" type="text" id="textb" />
           <div class="text-checkbtn">
-            <input type="checkbox" name="" id="check-bottom-text" />
+            <input type="checkbox" name="checkbox" id="check-bottom-text" />
             <p>Sin texto inferior</p>
           </div>
         </div>
@@ -152,12 +152,12 @@
           </div>
           <div class="text-stylize">
             <div class="text-color">
-              <label for="">COLOR</label>
-              <input class="color" type="color" name="" id="color-text" />
+              <label for="color">COLOR</label>
+              <input class="color" type="color" name="color-text id="color-text" />
             </div>
             <div class="text-color">
-              <label for="">FONDO</label>
-              <input class="color" type="color" name="" id="color-back-text" />
+              <label for="fondo">FONDO</label>
+              <input class="color" type="color" name="color-back-text" id="color-back-text" />
             </div>
           </div>
           <div class="text-checkbtn">
@@ -203,9 +203,6 @@
     </main>
     <script src="index.js"></script>
     <!-- javascript de fontawsome -->
-    <script
-      src="https://kit.fontawesome.com/29587cd069.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/29587cd069.js" crossorigin="anonymous"></script>
   </body>
 </html>

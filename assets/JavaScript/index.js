@@ -237,8 +237,15 @@ $("#btn-close-title").addEventListener("click", () => {
     $(".window-title-container").style.display = "none"
 })
 
-// aleternar paneles =====================
+// aleternar paneles en desktop=====================
 
+$("#open-window-image").addEventListener("click", () => {
+    $(".window-image-container").classList.toggle(".window-title-container")
+})
+
+$("#open-window-image").addEventListener("click", () => {
+    $(".window-title-container").style.display = "none"
+})
 
 
 
