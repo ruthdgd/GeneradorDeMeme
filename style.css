@@ -98,9 +98,17 @@
     -webkit-box-shadow: 4px 6px 5px 1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 4px 6px 5px 1px rgba(0, 0, 0, 0.75);
     box-shadow: 4px 6px 5px 1px rgba(0, 0, 0, 0.75);
+    top: 0;
+    left: 0;
     cursor: pointer;
     display: flex;
     flex-direction: column;
+  }
+
+  .window-image-container{
+    display: none;
+    top: 0;
+    left: 0;
   }
 
   .window-title {
@@ -215,7 +223,13 @@
   }
 
   /* ---------------------VENTANA DE TEXTO----------------------------------- */
+  
+  .window-title-container{
+    display: none;
+    top: 0;
+    left: 0;
 
+  }
   .text-top-bottom {
     width: 100%;
     margin-top: 0.4rem;
@@ -440,6 +454,10 @@
   }  
 
   .hidden{
+    display: none;
+  }
+
+  [id= "visibility--hidden"] {
     display: none;
   }
 

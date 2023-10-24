@@ -62,19 +62,15 @@ $("#reset").addEventListener("click", () => {
 
 // ================================= acorddion===================
 
-$(".open-window-image").addEventListener("click", () => {
-    $(".open-window-image").classList.toggle("active")
-    $(".window-image-container").classList.toggle("visibility--hidden")
-})
+// $(".open-window-image").addEventListener("click", () => {
+//     $(".open-window-image").classList.toggle("active")
+//     $(".window-image-container").classList.toggle("visibility--hidden")
+// })
 
-$(".open-window-title").addEventListener("click", () => {
-    $(".open-window-title").classList.toggle("active")
-    $(".window-title-container").classList.toggle("visibility--hidden")
-})
-
-
-// sidebar======================================================================
-
+// $(".open-window-title").addEventListener("click", () => {
+//     $(".open-window-title").classList.toggle("active")
+//     $(".window-title-container").classList.toggle("visibility--hidden")
+// })
 
 // input url======
 
@@ -224,19 +220,46 @@ const downloadMeme = () => {
 $(".meme-download").addEventListener("click",downloadMeme)
 
 // sidebar======================================================================
-$(".hidden-window").addEventListener("click", () => {
 
+
+
+
+// $(".open-window-image").addEventListener("click", () => {
+//     $(".open-window-image").classList.toggle("active")
+//     $(".window-image-container").classList.toggle("visibility--hidden")
+// })
+
+// $(".open-window-title").addEventListener("click", () => {
+//     $(".open-window-title").classList.toggle("active")
+//     $(".window-title-container").classList.toggle("visibility--hidden")
+// })
+
+
+// $("#btn-open-modal").addEventListener("click", () => {
+//     $("#modal-container").style.display = "block"
+// })
+
+// $("#btn-close-modal").addEventListener("click", () => {
+//     $("#modal-container").style.display = "none"
+// })
+
+$("#open-window-image").addEventListener("click", () => {
+    $(".window-image-container").style.display = "block"
 })
 
-$(".open-window-image").addEventListener("click", () => {
-    $(".window-image-container").style.width = "16rem"
-    $(".open-window-image").style.display = "none"
+$("#btn-close-image").addEventListener("click", () => {
+    $(".window-image-container").style.display = "none"
 })
 
-$(".open-window-title").addEventListener("click", () => {
-    $("window-title-container").style.width = "0"
-    $(".open-window-title").style.display = "block"
+$("#open-window-title").addEventListener("click", () => {
+    $(".window-title-container").style.display = "block"
 })
+
+$("#btn-close-title").addEventListener("click", () => {
+    $(".window-title-container").style.display = "none"
+})
+
+
 
 
 
