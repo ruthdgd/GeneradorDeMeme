@@ -219,29 +219,7 @@ const downloadMeme = () => {
 
 $(".meme-download").addEventListener("click",downloadMeme)
 
-// sidebar======================================================================
-
-
-
-
-// $(".open-window-image").addEventListener("click", () => {
-//     $(".open-window-image").classList.toggle("active")
-//     $(".window-image-container").classList.toggle("visibility--hidden")
-// })
-
-// $(".open-window-title").addEventListener("click", () => {
-//     $(".open-window-title").classList.toggle("active")
-//     $(".window-title-container").classList.toggle("visibility--hidden")
-// })
-
-
-// $("#btn-open-modal").addEventListener("click", () => {
-//     $("#modal-container").style.display = "block"
-// })
-
-// $("#btn-close-modal").addEventListener("click", () => {
-//     $("#modal-container").style.display = "none"
-// })
+// ventana modal======================================================================
 
 $("#open-window-image").addEventListener("click", () => {
     $(".window-image-container").style.display = "block"
@@ -258,6 +236,10 @@ $("#open-window-title").addEventListener("click", () => {
 $("#btn-close-title").addEventListener("click", () => {
     $(".window-title-container").style.display = "none"
 })
+
+// aleternar paneles =====================
+
+
 
 
 
