@@ -44,13 +44,10 @@ $("#btn-close-title").addEventListener("click", () => {
 
 $("#open-window-image").addEventListener("click", () => {
     $(".window-image-container").classList.toggle(".window-title-container")
-})
-
-$("#open-window-image").addEventListener("click", () => {
     $(".window-title-container").style.display = "none"
 })
 
-// =======================MODO CLARO MODO OSCURO=======================
+// ====MODO CLARO MODO OSCURO=======================
 
 $(".change-mode").addEventListener("click", ()=>{
     const currentTheme = $("body").getAttribute("change-theme")
@@ -112,17 +109,11 @@ $("#color-back-meme").addEventListener("input", (e) =>{
 
 $("#color-text").addEventListener("input", (e) =>{
     $(".top-text").style.color = e.target.value
-})
-
-$("#color-text").addEventListener("input", (e) =>{
     $(".bottom-text").style.color=e.target.value
 })
 
 $("#color-back-text").addEventListener("input", (e) =>{
     $(".bottom-text").style.backgroundColor=e.target.value
-})
-
-$("#color-back-text").addEventListener("input", (e) =>{
     $(".top-text").style.backgroundColor=e.target.value
 })
 
@@ -161,12 +152,8 @@ $("#font--select").addEventListener("input", (e) => {
 
 $("#font--size").addEventListener("input", (e) => {
     const fontSizeMeme = e.target.value + "px"
-    $(".top-text").style.fontSize = fontSizeMeme 
- })
-
- $("#font--size").addEventListener("input", (e) => {
-    const fontSizeMeme  = e.target.value + "px"
-    $(".bottom-text").style.fontSize = fontSizeMeme 
+    $(".top-text").style.fontSize = fontSizeMeme
+    $(".bottom-text").style.fontSize = fontSizeMeme  
  })
 
  //text align buttons=========================================
@@ -199,7 +186,6 @@ $("#check-transparent").addEventListener("input", (e) => {
     }
 })
 
-
 //botones de contorno=================================================
 
 $(".unset-tone").addEventListener("click", () => {
@@ -222,10 +208,6 @@ $(".dark-tone").addEventListener("click", () => {
 $("#text--space").addEventListener("input", (e) => {
     const spacing = e.target.value + "px"
     $(".top-text").style.padding = spacing
-})
-
-$("#text--space").addEventListener("input", (e) => {
-    const spacing = e.target.value + "px"
     $(".bottom-text").style.padding = spacing
 })
 
@@ -233,12 +215,8 @@ $("#text--space").addEventListener("input", (e) => {
 
 $("#text-space-items").addEventListener("input", (e) => {
     $(".top-text").style.lineHeight = e.target.value
-})
-
-$("#text-space-items").addEventListener("input", (e) => {
     $(".bottom-text").style.lineHeight = e.target.value
 })
-
 
 // descargar meme=================================================
 
